@@ -1,0 +1,3 @@
+[submodule "better-cmake/fancylib/thirdparty/gtest/googletest"]
+	path = better-cmake/fancylib/thirdparty/gtest/googletest
+	url = https://github.com/google/googletest.git
