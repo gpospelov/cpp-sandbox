@@ -6,7 +6,7 @@ file(GLOB source_files "src/*.cpp")
 file(GLOB include_files "src/*.h")
 
 add_executable(${test} ${source_files} ${include_files})
-target_link_libraries(${test} gtest_main)
+target_link_libraries(${test} gtest_main FancyLib::FancyLib)
 
 if (FANCYLIB_TESTS_AUTOEXEC)
     if (FANCYLIB_TESTS_AUTODISCOVERY)

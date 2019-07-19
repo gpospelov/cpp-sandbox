@@ -1,8 +1,6 @@
 #include <coreutils.h>
 
-using namespace fancy;
-
-boost::optional<std::string> fizzbuzz(int value)
+boost::optional<std::string> fancy::fizzbuzz(int value)
 {
-    return boost::optional<std::string>("error");
+    return boost::optional<std::string>("fizzbuzz");
 }

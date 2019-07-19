@@ -1,6 +1,6 @@
 #include "fancyutils.h"
 
-int get_number()
+int fancy::get_number()
 {
     return 42;
 }
