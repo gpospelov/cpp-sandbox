@@ -9,7 +9,7 @@ find_dependency(Boost 1.55 REQUIRED)
 
 list(REMOVE_AT CMAKE_MODULE_PATH -1)
 
-if(NOT TARGET JSONUtils::JSONUtils)
+if(NOT TARGET FancyLib::FancyLib)
     include("${FancyLib_CMAKE_DIR}/FancyLibTargets.cmake")
 endif()
 
