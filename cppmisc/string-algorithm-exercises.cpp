@@ -1,5 +1,6 @@
 //! Exercises with basic stl algorithms (following C++17 J. Galowicz book).
 #include <algorithm>
+#include <cctype>
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -36,6 +37,12 @@ std::string decompress(const std::string& input)
     return oss.str();
 }
 
+template <typename It> It remove_multispace(It it, It end_it)
+{
+    return std::unique(it, end_it,
+                       [](auto a, auto b) { return std::isspace(a) && std::isspace(b); });
+}
+
 void test_compress_decompress()
 {
     std::string input{"aaabb"};
@@ -43,8 +50,16 @@ void test_compress_decompress()
     std::cout << decompress("a3b2") << std::endl;
 }
 
+void test_remove_multispace()
+{
+    std::string s{" a  b"};
+    s.erase(remove_multispace(s.begin(), s.end()), s.end());
+    std::cout << "{" << s << "}\n";
+}
+
 int main()
 {
-    test_compress_decompress();
+    //    test_compress_decompress();
+    test_remove_multispace();
     return 0;
 }
