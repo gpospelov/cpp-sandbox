@@ -1,7 +1,3 @@
-#include <iostream>
+import hello;
 
-int main()
-{
-    std::cout << "Hello World" << "\n";
-    return 0;
-}
+int main() { say_hello("Modules"); } 
